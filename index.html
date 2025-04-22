@@ -7,10 +7,12 @@
     <title>Portfolio - Beatriz Andreos Bezerra</title>
 
     <style>
+        /* Estilos padrões para o tema claro */
         body {
             background-color: rgb(130, 130, 202);
             margin: 0;
             font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         header {
@@ -32,6 +34,7 @@
         h1 {
             color: rgb(15, 15, 62);
             margin: 10px 0;
+            transition: color 0.3s;
         }
 
         h1:hover {
@@ -51,7 +54,7 @@
         .botoes input {
             background-color: rgb(41, 41, 117);
             color: rgb(232, 231, 249);
-            width: 180px;
+            width: 200px;
             height: 40px;
             border: 2px solid rgb(15, 15, 62);
             border-radius: 25px;
@@ -65,7 +68,6 @@
             color: rgb(157, 157, 255);
             transform: scale(1.1);
             transition: 500ms;
-
         }
 
         .sobre-mim {
@@ -80,10 +82,52 @@
         }
 
         .sobre-mim:hover {
-        color: rgb(84, 84, 201);
-        opacity: 100%;
-        transform: scale(1.03);
-        transition: 500ms;
+            color: rgb(84, 84, 201);
+            opacity: 100%;
+            transform: scale(1.03);
+            transition: 500ms;
+        }
+
+        /* Tema escuro */
+        body.dark {
+            background-color: rgb(57, 57, 126);
+            color: white;
+        }
+
+        body.dark header {
+            background-color: rgb(28, 28, 71);
+        }
+
+        body.dark .botoes input {
+            background-color: rgb(21, 21, 107));
+            border: 2px solid rgb(15, 15, 62);
+            color: rgb(232, 231, 249);
+        }
+
+        body.dark .sobre-mim {
+            background-color: rgb(42, 42, 92);
+            color: rgb(232, 231, 249);
+            box-shadow: 0 10px 10px rgb(0, 0, 0);
+        }
+
+        body.dark .sobre-mim:hover {
+            color: rgb(84, 84, 201);
+        }
+
+        /* Botão de alternância */
+        .theme-toggle {
+            background-color: rgb(57, 57, 126);
+            color: rgb(232, 231, 249);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .theme-toggle:hover {
+            background-color: rgb(34, 34, 86);
         }
 
     </style>
@@ -105,6 +149,9 @@
             <input type="button" value="Meu Currículo">
             <input type="button" value="Conheça o Ford ENTER">
         </div>
+
+        <!-- Botão para alternar entre os temas -->
+        <button class="theme-toggle" onclick="toggleTheme()">Mudar Tema</button>
     </header>
 
     <!-- Texto Sobre mim -->
@@ -114,6 +161,12 @@
             voluptatem harum? Distinctio cum ex temporibus. Asperiores, facere a dolorum ratione magni reprehenderit
             officiis itaque.</p>
     </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
 </body>
 
 </html>
