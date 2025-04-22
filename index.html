@@ -60,14 +60,14 @@
             border-radius: 25px;
             font-size: 1rem;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .botoes input:hover {
             background-color: rgb(34, 34, 86);
             color: rgb(157, 157, 255);
             transform: scale(1.1);
-            transition: 500ms;
+            transition: 0.5s;
         }
 
         .sobre-mim {
@@ -79,13 +79,14 @@
             color: rgb(34, 34, 86);
             border-radius: 10px;
             box-shadow: 0 10px 10px rgb(79, 79, 122);
+            transition: transform 0.3s, opacity 0.3s;
         }
 
         .sobre-mim:hover {
             color: rgb(84, 84, 201);
             opacity: 100%;
             transform: scale(1.03);
-            transition: 500ms;
+            transition: 0.5s;
         }
 
         /* Tema escuro */
@@ -99,9 +100,16 @@
         }
 
         body.dark .botoes input {
-            background-color: rgb(21, 21, 107));
+            background-color: rgb(21, 21, 107);
             border: 2px solid rgb(15, 15, 62);
             color: rgb(232, 231, 249);
+        }
+
+        body.dark .botoes input:hover {
+            background-color: rgb(34, 34, 86);
+            color: rgb(157, 157, 255);
+            transform: scale(1.1);
+            transition: 0.5s;
         }
 
         body.dark .sobre-mim {
@@ -112,6 +120,9 @@
 
         body.dark .sobre-mim:hover {
             color: rgb(84, 84, 201);
+            transform: scale(1.03);
+            opacity: 100%;
+            transition: 0.5s;
         }
 
         /* Botão de alternância */
