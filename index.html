@@ -6,23 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Beatriz Andreos Bezerra</title>
 
+    <style>
+        body {
+            background-color: rgb(130, 130, 202);
+            margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+        }
+
+        header {
+            background-color: rgb(57, 57, 126);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .capa {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: rgb(15, 15, 62);
+            margin: 10px 0;
+        }
+
+        h1:hover {
+            color: rgb(84, 84, 201);
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+
+        .botoes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .botoes input {
+            background-color: rgb(41, 41, 117);
+            color: rgb(232, 231, 249);
+            width: 180px;
+            height: 40px;
+            border: 2px solid rgb(15, 15, 62);
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .botoes input:hover {
+            background-color: rgb(34, 34, 86);
+            color: rgb(157, 157, 255);
+            transform: scale(1.1);
+            transition: 500ms;
+
+        }
+
+        .sobre-mim {
+            opacity: 70%;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            color: rgb(34, 34, 86);
+            border-radius: 10px;
+            box-shadow: 0 10px 10px rgb(79, 79, 122);
+        }
+
+        .sobre-mim:hover {
+        color: rgb(84, 84, 201);
+        opacity: 100%;
+        transform: scale(1.03);
+        transition: 500ms;
+        }
+
+    </style>
 </head>
 
 <body>
-    <!-- Imagem do meu rosto -->
-    <img src="Imagens/foto.jpg" alt="Minha Foto"><br>
+    <header>
+        <!-- Imagem do meu rosto -->
+        <img src="Imagens/stitch icon.png" alt="Minha Foto" class="capa">
 
-    <!-- Título -->
-    <h1>Beatriz Andreos Bezerra</h1>
+        <!-- Título -->
+        <h1>Beatriz Andreos Bezerra</h1>
 
-    <!-- Menu de navegação -->
-    <ul>
-        <li><input type="button" value="Sobre Mim"></li>
-        <li><input type="button" value="Fale Comigo"></li>
-        <li><input type="button" value="Meus Projetos"></li>
-        <li><input type="button" value="Meu Currículo"></li>
-        <li><input type="button" value="Conheça o Ford ENTER"></li>
-    </ul>
+        <!-- Botões lado a lado -->
+        <div class="botoes">
+            <input type="button" value="Sobre Mim">
+            <input type="button" value="Fale Comigo">
+            <input type="button" value="Meus Projetos">
+            <input type="button" value="Meu Currículo">
+            <input type="button" value="Conheça o Ford ENTER">
+        </div>
+    </header>
 
     <!-- Texto Sobre mim -->
     <div class="sobre-mim">
