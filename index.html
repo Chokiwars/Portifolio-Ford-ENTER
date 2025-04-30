@@ -45,16 +45,16 @@
 
         .botoes {
             display: flex;
-            flex-wrap: wrap;
+            height: 40px;
+            gap: 10px;
+            width: 100%;
             justify-content: center;
-            gap: 15px;
-            margin-top: 10px;
         }
 
-        .botoes input {
+        .botoes button {
+            padding: 10px;
             background-color: rgb(41, 41, 117);
             color: rgb(232, 231, 249);
-            width: 200px;
             height: 40px;
             border: 2px solid rgb(15, 15, 62);
             border-radius: 25px;
@@ -63,11 +63,22 @@
             transition: background-color 0.3s, transform 0.3s;
         }
 
-        .botoes input:hover {
+        .botoes button:hover {
             background-color: rgb(34, 34, 86);
             color: rgb(157, 157, 255);
             transform: scale(1.1);
             transition: 0.5s;
+        }
+
+        .botoes button a {
+            color: inherit;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .botoes button a:hover {
+            color: inherit;
+            text-decoration: none;
         }
 
         .sobre-mim {
@@ -154,11 +165,11 @@
 
         <!-- Botões lado a lado -->
         <div class="botoes">
-            <a href="sobreMim.html"><input type="button" value="Sobre Mim"></a>
-            <input type="button" value="Fale Comigo">
-            <input type="button" value="Meus Projetos">
-            <input type="button" value="Meu Currículo">
-            <input type="button" value="Conheça o Ford ENTER">
+            <button><a href="sobreMim.html">Sobre Mim</a></button>
+            <button><a href="contato.html">Contatos</a></button>
+            <button><a href="meusProjetos.html">Meus Projetos</a></button>
+            <button><a href="meuCurriculo.html">Meu Curriculo</a></button>
+            <button><a href="conhecaFord.html">Conheça Ford Enter</a></button>
         </div>
 
         <!-- Botão para alternar entre os temas -->
