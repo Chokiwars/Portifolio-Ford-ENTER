@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Beatriz Andreos Bezerra</title>
+    
+    <!-- Link para Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <style>
         /* Estilos padrões para o tema claro */
@@ -109,9 +112,10 @@
         body.dark header {
             background-color: rgb(28, 28, 71);
         }
+        
 
         body.dark .botoes input {
-            background-color: rgb(21, 21, 107);
+            background-color: rgb(36, 36, 131);
             border: 2px solid rgb(15, 15, 62);
             color: rgb(232, 231, 249);
         }
@@ -136,7 +140,7 @@
             transition: 0.5s;
         }
 
-        /* Botão de alternância */
+        /* Botão de alternância com animação */
         .theme-toggle {
             background-color: rgb(57, 57, 126);
             color: rgb(232, 231, 249);
@@ -144,12 +148,23 @@
             border: none;
             border-radius: 25px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
             margin-top: 20px;
+            position: relative;
         }
 
         .theme-toggle:hover {
             background-color: rgb(34, 34, 86);
+        }
+
+        /* Animação de transição para o ícone */
+        .theme-toggle i {
+            font-size: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        body.dark .theme-toggle i {
+            transform: translateX(20px);
         }
 
     </style>
@@ -173,20 +188,30 @@
         </div>
 
         <!-- Botão para alternar entre os temas -->
-        <button class="theme-toggle" onclick="toggleTheme()">Mudar Tema</button>
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-sun"></i> <!-- Sol por padrão -->
+        </button>
     </header>
 
     <!-- Texto Sobre mim -->
     <div class="sobre-mim">
-        <h2>Sobre Mim</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quam amet cupiditate neque obcaecati accusantium
-            voluptatem harum? Distinctio cum ex temporibus. Asperiores, facere a dolorum ratione magni reprehenderit
-            officiis itaque.</p>
+        <h2>Um Pouco Sobre Mim</h2>
+        <p>Oi! Seja bem-vindo(a) ao meu cantinho na web!<br>Meu nome é Beatriz Andreos Bezerra, tenho 19 anos e moro
+            em São Paulo. <br> Aqui você poderá encontrar mais sobre mim, o que eu faço ou estou fazendo e 
+            um pouco dos meus projetos!</p>
     </div>
 
     <script>
         function toggleTheme() {
             document.body.classList.toggle("dark");
+            const icon = document.querySelector(".theme-toggle i");
+            if (document.body.classList.contains("dark")) {
+                icon.classList.remove("fa-sun");
+                icon.classList.add("fa-moon");
+            } else {
+                icon.classList.remove("fa-moon");
+                icon.classList.add("fa-sun");
+            }
         }
     </script>
 </body>
