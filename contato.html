@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Mim</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <style>
         /* Estilos padrões para o tema claro */
@@ -195,6 +196,14 @@
     <script>
         function toggleTheme() {
             document.body.classList.toggle("dark");
+            const icon = document.querySelector(".theme-toggle i");
+            if (document.body.classList.contains("dark")) {
+                icon.classList.remove("fa-sun");
+                icon.classList.add("fa-moon");
+            } else {
+                icon.classList.remove("fa-moon");
+                icon.classList.add("fa-sun");
+            }
         }
     </script>
 </body>
